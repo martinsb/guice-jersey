@@ -49,7 +49,8 @@ public class SampleJerseyModule extends JerseyModule {
 `````
 
 * Create Guice injector to retrieve Jersey's `ApplicationHandler` instance and use it:
-
+``````
 Injector injector = Guice.createInjector(new SampleJerseyModule());
 ApplicationHandler handler = injector.getInstance(ApplicationHandler.class);
 handler.handle(...);
+``````
