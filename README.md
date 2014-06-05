@@ -41,8 +41,10 @@ public class SampleJerseyModule extends JerseyModule {
     
     @Override
     protected void configureResources() {
+        //scan method recursively finds all the resource classes (annotated with @Path) in the given java.lang.Package
+        //and injects the required dependencies 
         scan(SampleResource.class.getPackage());
-        //install another dependant module?
+        //install another dependent module?
         install(new FooModule());
     }
 }
